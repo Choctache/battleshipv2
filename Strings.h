@@ -5,12 +5,12 @@
 #ifndef BATTLESHIPV2_STRINGS_H
 #define BATTLESHIPV2_STRINGS_H
 
-#define NUM_OF_ELEMNTS 3
+#define NUM_OF_LANGUAGES 3
 enum
 {
-    LANG_EN,
-    LANG_DE,
-    LANG_FR
+    ENGLISH,
+    GERMAN,
+    FRENCH
 
 }LANGUAGE;
 
@@ -23,14 +23,14 @@ enum{
 typedef struct
 {
 
-    char const * const text[NUM_OF_ELEMNTS];
+    char const * const text[NUM_OF_LANGUAGES];
 
 } STRING;
 
 void setLanguage();
 int getLanguage();
 
-char const * strGet(int str_no);
+char const * getMessage(int str_no);
 
 
 #endif //BATTLESHIPV2_STRINGS_H

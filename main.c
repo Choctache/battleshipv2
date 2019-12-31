@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "Strings.h"
-
+#include <windows.h>
+#include "Colour.h"
 
 void printStartMessage(){
     printf("\n"
@@ -14,16 +15,28 @@ void printStartMessage(){
 
 
 int main() {
-    printStartMessage();
-    char * message = strGet(0);
 
-    printf("%s\n", strGet(WELCOME));
-    printf("%s\n", strGet(GOODBYE));
-    printf("%s\n", strGet(START_CMD));
-    setLanguage(1);
-    printf("%s\n", strGet(WELCOME));
-    setLanguage(2);
-    printf("%s\n", strGet(WELCOME));
+    setConsole();
+
+    printStartMessage();
+
+    printf("%s\n", getMessage(WELCOME));
+    printf("%s\n", getMessage(GOODBYE));
+    printf("%s\n", getMessage(START_CMD));
+
+    setColour(GREEN);
+
+    setLanguage(GERMAN);
+    printf("%s\n", getMessage(WELCOME));
+    printf("%s\n", getMessage(GOODBYE));
+    printf("%s\n", getMessage(START_CMD));
+
+    resetColour();
+
+    setLanguage(FRENCH);
+    printf("%s\n", getMessage(WELCOME));
+    printf("%s\n", getMessage(GOODBYE));
+    printf("%s\n", getMessage(START_CMD));
 
     return 0;
 }

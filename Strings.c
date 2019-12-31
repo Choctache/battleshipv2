@@ -3,7 +3,7 @@
 //
 // Created by jessi on 30.12.2019.
 //
-static int lang = LANG_EN;
+static int lang = ENGLISH;
 
 static const STRING strings[] = {
         /*WELCOME*/
@@ -16,8 +16,8 @@ static const STRING strings[] = {
          "Au revoir"},
         /*START_CMD*/
         {"Press enter to start a new game or any other key to exit.",
-         "Drücke Enter um ein neues Spiel zu starten oder jede andere Taste um das Programm zu beenden.",
-         "Nöö"}
+         "Presse die Entertaste um ein neues Spiel zu starten oder jede andere Taste um das Programm zu beenden.",
+         "Nei!"}
 };
 
 void setLanguage(int newLang){
@@ -28,7 +28,7 @@ int getLanguage(){
     return lang;
 }
 
-char const * strGet(int str_no)
+char const * getMessage(int str_no)
 {
     return strings[str_no].text[getLanguage()];
 }

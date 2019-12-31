@@ -3,4 +3,4 @@ project(battleshipv2 C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(battleshipv2 main.c Board.h Board.c Strings.h Strings.c)
+add_executable(battleshipv2 main.c Board.h Board.c Strings.h Strings.c Colour.h Colour.c)
