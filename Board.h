@@ -58,15 +58,18 @@ typedef struct{
     char type;
 } Cell;
 
+typedef struct{
+    int tries;
+    bool hasWon;
+} Status;
+
 void initializeBoard();
 void printBoard();
 void placeShip();
-
+void shootBoard();
 bool canPlaceShip();
-
+bool hasWon();
 RandomLocation generateRandomLocation();
-
-int generateRandomNum();
 
 
 
